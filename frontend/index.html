@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yaman's Personal AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <button class="logo" id="profilePhotoButton" type="button" aria-label="Upload profile photo" title="Upload profile photo">
+        <span id="profilePhotoFallback">YA</span><img id="profilePhoto" alt="" hidden>
+      </button>
+      <input id="profilePhotoInput" type="file" accept="image/*" hidden>
+      <div><b>Yaman's Personal AI</b><small>Personal AI assistant</small></div>
+    </div>
+    <button id="newChat" class="btn primary">New chat</button>
+
+    <section class="grow">
+      <h4>Chats</h4>
+      <ul id="chatList" class="list"></ul>
+    </section>
+
+    <div class="side-foot">
+      <label class="switch" title="Show the full retrieval pipeline for each answer"><input type="checkbox" id="debugToggle"><span class="track"></span>Debug RAG</label>
+      <div class="row">
+        <button id="clearChat" class="btn">Clear chat</button>
+        <button id="themeToggle" class="btn" aria-label="Toggle theme">Theme</button>
+      </div>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <main>
+    <header class="topbar">
+      <button id="menuBtn" class="icon-btn" aria-label="Open menu">☰</button>
+      <span id="chatTitle" class="chat-title">New chat</span>
+      <span id="status" class="pill">Connecting</span>
+    </header>
+
+    <div id="messages" class="messages" aria-live="polite"></div>
+
+    <div class="composer-wrap">
+      <div class="composer">
+        <textarea id="input" rows="1" placeholder="Ask a question…" aria-label="Message"></textarea>
+        <button id="sendBtn" class="send" aria-label="Send">Send</button>
+      </div>
+      <small class="hint">Enter to send · Shift + Enter for a new line</small>
+    </div>
+  </main>
+</div>
+<div id="toasts" class="toasts"></div>
+<script src="script.js"></script>
+</body>
+</html>

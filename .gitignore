@@ -1,0 +1,18 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+personal_ai/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+data/model_cache/
+# IDE / Editor folders
+.vscode/
+
+# Node / Frontend builds (if relevant inside frontend/)
+node_modules/
+.next/
+dist/
+build/

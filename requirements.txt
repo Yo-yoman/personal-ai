@@ -1,0 +1,10 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+python-dotenv>=1.0
+pydantic>=2.6
+groq>=0.9
+pypdf>=4.0
+python-docx>=1.1
+numpy>=1.26
+fastembed>=0.3

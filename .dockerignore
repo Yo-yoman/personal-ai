@@ -1,0 +1,10 @@
+.env
+.env.*
+.git
+.venv
+venv
+personal_ai
+__pycache__
+**/__pycache__
+*.py[cod]
+data/model_cache
